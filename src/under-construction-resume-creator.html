@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Primary Meta Tags -->
+  <title>Core Trades – Resume Creator</title>
+  <meta name="description" content="Core Trades Resume Creator – Build a professional resume tailored for industrial and skilled trades."/>
+  <meta name="keywords" content="resume creator, resume builder, skilled trade resume, industrial trades resume"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://www.coretrades.co/under-construction-resume-creator.html"/>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://www.coretrades.co/under-construction-resume-creator.html"/>
+  <meta property="og:title" content="Core Trades – Resume Creator"/>
+  <meta property="og:description" content="Build a professional resume tailored for industrial and skilled trades."/>
+  <meta property="og:image" content="https://www.coretrades.co/assets/og-image-resume.jpg"/>
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@coretradesco"/>
+  <meta name="twitter:title" content="Core Trades – Resume Creator"/>
+  <meta name="twitter:description" content="Build a professional resume tailored for industrial and skilled trades."/>
+  <meta name="twitter:image" content="https://www.coretrades.co/assets/twitter-image-resume.jpg"/>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url": "https://www.coretrades.co/under-construction-resume-creator.html",
+    "name": "Core Trades Resume Creator",
+    "description": "Resume Creator to build professional resumes for industrial and skilled trades."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "url": "https://www.coretrades.co/",
+    "name": "Core Trades",
+    "logo": "https://www.coretrades.co/assets/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/coretrades",
+      "https://twitter.com/coretradesco",
+      "https://www.linkedin.com/company/coretrades"
+    ]
+  }
+  </script>
+
+  <style>
+    /* Accessibility skip-link */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #000;
+      color: #fff;
+      padding: 8px 16px;
+      z-index: 200;
+      text-decoration: none;
+    }
+    .skip-link:focus {
+      top: 0;
+    }
+
+    /* Reset & base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Apply the same background on every page */
+    body, html {
+      height: 100%;
+      font-family: 'Arial Black', Arial, sans-serif;
+      background: url('background.jpg') no-repeat center center/cover;
+      background-attachment: fixed;
+      overflow-x: hidden;
+      color: #fff;
+    }
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* Hamburger menu button */
+    .hamburger {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      border: 2px solid #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 100;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .hamburger:hover {
+      background: rgba(255,255,255,0.3);
+      transform: scale(1.1);
+    }
+    .hamburger span {
+      display: block;
+      width: 60%;
+      height: 3px;
+      background: #fff;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+    .hamburger.open span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Side navigation */
+    #side-menu {
+      position: fixed;
+      top: 60px;
+      left: -260px;
+      width: 260px;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      padding: 2rem 1rem;
+      transition: left 0.3s ease;
+      z-index: 99;
+    }
+    #side-menu.open {
+      left: 0;
+    }
+    .menu-title {
+      color: #f57c00;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    #side-menu ul {
+      list-style: none;
+      margin-top: 1rem;
+    }
+    #side-menu li {
+      margin-bottom: 1rem;
+      position: relative;
+      padding-left: 1.2rem;
+    }
+    #side-menu li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: #f57c00;
+    }
+    #side-menu a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.2s;
+    }
+    #side-menu a:hover {
+      color: #e65100;
+    }
+
+    /* Hero section */
+    .hero {
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      z-index: 2;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 0.5rem;
+      color: #f57c00;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      max-width: 700px;
+    }
+    .hero .btn-contact {
+      background: #f57c00;
+      color: #fff;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      cursor: pointer;
+    }
+    .hero .btn-contact:hover {
+      background: #e65100;
+    }
+
+    /* Info section */
+    .info-section {
+      padding: 3rem 1rem;
+      background: rgba(0,0,0,0.6);
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+    .info-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #f57c00;
+    }
+    .info-section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto 1rem auto;
+    }
+
+    /* Tint bottom area */
+    #coming-soon {
+      margin-top: 2rem;
+      padding: 4rem 1rem;
+      background: rgba(0,0,0,0.8);
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+    #coming-soon h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #f57c00;
+    }
+    #coming-soon p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    #mc_embed_signup {
+      width: 100%!important;
+      max-width: 400px!important;
+      margin: 0 auto;
+      background: rgba(0,0,0,0.6)!important;
+      padding: 1.5rem;
+      border-radius: 8px;
+    }
+    #mc_embed_signup input.email {
+      background: rgba(0,0,0,0.8);
+      border: 1px solid #444;
+      color: #fff;
+    }
+    #mc_embed_signup .button,
+    #mc-embedded-subscribe {
+      width: 100%!important;
+      background: #111;
+      color: #fff;
+      border: none;
+      padding: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    #mc_embed_signup .indicates-required {
+      display: none;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2.5rem; }
+      .hero p { font-size: 1rem; }
+      .info-section h2 { font-size: 2rem; }
+      .info-section p { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="overlay"></div>
+  <div class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </div>
+  <nav id="side-menu" aria-label="Main navigation">
+  <div class="menu-title">Core Trades Inc.</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="under-construction-job-board.html">Job Board</a></li>
+    <li><a href="under-construction-corerecruit.html">CoreRecruit™</a></li>
+    <li><a href="under-construction-resume-creator.html">Resume Creator</a></li>
+    <li><a href="under-construction-corecompliance.html">CoreCompliance™</a></li>
+    <li><a href="under-construction-coretrades-daily.html">CoreTrades Daily</a></li>
+    <li><a href="under-construction-contact.html">Contact Us</a></li>
+  </ul>
+</nav>
+
+  <section class="hero" id="main-content">
+    <h1>Resume Creator</h1>
+    <p>Coming soon: a step-by-step tool to build a professional, trade-focused resume. From selecting your trade category to formatting your work experience, we’ll guide you through every section.</p>
+    <button class="btn-contact" onclick="document.getElementById('coming-soon').scrollIntoView({behavior:'smooth'})">Stay Notified</button>
+  </section>
+
+  <section class="info-section">
+    <h2>How It Will Work</h2>
+    <p><strong>1. Choose Your Trade:</strong> Select from categories like Welding, Electrical, Carpentry, Mining, Heavy Equipment Operation, etc.</p>
+    <p><strong>2. Enter Your Details:</strong> Fill out contact info, certifications, work history, and skills. We’ll provide industry-specific prompts (e.g., safety certifications for Construction, Red Seal details for Electricians).</p>
+    <p><strong>3. Pick a Template:</strong> We’ll offer trade-focused resume templates that highlight relevant skills—whether you’re a plumber showcasing pipefitting experience or a millwright listing machinery maintenance.</p>
+    <p><strong>4. Format & Download:</strong> Preview your resume, export as PDF or Word, and get tips on customizing for each job application in the industrial trades space.</p>
+    <p><strong>5. Additional Resources:</strong> Optional cover-letter builder, interview prep checklists, and downloadable “Jobsite Safety” quick-reference sheets to include with your application.</p>
+  </section>
+
+  <section id="coming-soon">
+    <h2>Coming Soon</h2>
+    <p>Enter your email below and we’ll let you know the moment the Resume Creator goes live.</p>
+    <!-- Begin Mailchimp Signup Form -->
+    <div id="mc_embed_signup">
+      <form action="https://YOUR-USERNAME.usX.list-manage.com/subscribe/post?u=YOUR_U_VALUE&amp;id=YOUR_ID_VALUE" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll">
+          <label for="mce-EMAIL" style="color:#fff; font-size:1.2rem; margin-bottom:0.5rem; display:block;">Email Address</label>
+          <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="you@example.com" required>
+          <!-- honeypot field to deter bots -->
+          <div style="position: absolute; left: -5000px;" aria-hidden="true">
+            <input type="text" name="b_YOUR_U_VALUE_YOUR_ID_VALUE" tabindex="-1" value="">
+          </div>
+          <div class="clear" style="margin-top:1rem;">
+            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+          </div>
+        </div>
+      </form>
+    </div>
+    <!--End mc_embed_signup-->
+  </section>
+
+  <script>
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('hamburger').classList.toggle('open');
+      document.getElementById('side-menu').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

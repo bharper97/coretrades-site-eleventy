@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary Meta Tags -->
+  <title>Core Trades – Document Management Software (Under Construction)</title>
+  <meta name="description" content="Core Trades Document Management SaaS—manage pre-employment, government, and medical paperwork in a secure B2B platform. Join our private beta!">
+  <meta name="keywords" content="Core Trades document management, B2B SaaS, pre-employment paperwork, induction paperwork, government compliance, medical documentation, beta access, skilled trades">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.coretrades.co/under-construction-document-management.html">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.coretrades.co/under-construction-document-management.html">
+  <meta property="og:title" content="Core Trades – Document Management Software (Under Construction)">
+  <meta property="og:description" content="Manage pre-employment, government, and medical paperwork in a secure B2B platform. Join our private beta!">
+  <meta property="og:image" content="https://www.coretrades.co/assets/og-image-document-saas.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@coretradesco">
+  <meta name="twitter:title" content="Core Trades – Document Management SaaS (Under Construction)">
+  <meta name="twitter:description" content="Manage pre-employment, government, and medical paperwork in a secure B2B platform. Join our private beta!">
+  <meta name="twitter:image" content="https://www.coretrades.co/assets/twitter-image-document-saas.jpg">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url": "https://www.coretrades.co/under-construction-document-management.html",
+    "name": "Core Trades Document Management SaaS",
+    "description": "Securely manage pre-employment, government, and medical documentation in a B2B SaaS platform. Private beta available."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "url": "https://www.coretrades.co/",
+    "name": "Core Trades",
+    "logo": "https://www.coretrades.co/assets/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/coretrades",
+      "https://twitter.com/coretradesco",
+      "https://www.linkedin.com/company/coretrades"
+    ]
+  }
+  </script>
+
+  <style>
+    /* GLOBAL RESET + BASE */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body, html {
+      height: 100%;
+      font-family: 'Arial Black', Arial, sans-serif;
+      background: url('background.jpg') no-repeat center center/cover;
+      background-attachment: fixed;
+      overflow-x: hidden;
+      color: #fff;
+    }
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%);
+      z-index: 1;
+      pointer-events: none;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    button {
+      font-family: inherit;
+    }
+
+    /* SKIP-LINK FOR ACCESSIBILITY */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #000;
+      color: #fff;
+      padding: 8px 16px;
+      z-index: 200;
+      text-decoration: none;
+    }
+    .skip-link:focus {
+      top: 0;
+    }
+
+    /* HAMBURGER MENU STYLES */
+    .hamburger {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      border: 2px solid #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 100;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .hamburger:hover {
+      background: rgba(255,255,255,0.3);
+      transform: scale(1.1);
+    }
+    .hamburger span {
+      display: block;
+      width: 60%;
+      height: 3px;
+      background: #fff;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+    .hamburger.open span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* SIDE NAVIGATION */
+    #side-menu {
+      position: fixed;
+      top: 60px;
+      left: -280px;
+      width: 280px;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      padding: 2rem 1.5rem;
+      transition: left 0.3s ease;
+      z-index: 99;
+    }
+    #side-menu.open {
+      left: 0;
+    }
+    .menu-title {
+      color: #f57c00;
+      font-size: 1.6rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 1.2rem;
+    }
+    #side-menu ul {
+      list-style: none;
+      margin-top: 1rem;
+    }
+    #side-menu li {
+      margin-bottom: 1.2rem;
+      position: relative;
+      padding-left: 1.2rem;
+    }
+    #side-menu li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: #f57c00;
+    }
+    #side-menu a {
+      color: #fff;
+      font-size: 1rem;
+      transition: color 0.2s;
+    }
+    #side-menu a:hover {
+      color: #e65100;
+    }
+
+    /* HERO + INTRO SECTION */
+    .hero {
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem 1rem;
+      position: relative;
+      z-index: 2;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      color: #f57c00;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      max-width: 700px;
+      line-height: 1.4;
+    }
+    .hero .btn-beta {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 4px;
+      background: #f57c00;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .hero .btn-beta:hover {
+      background: #e65100;
+    }
+
+    /* CALL-TO-ACTION AREA */
+    .cta-area {
+      margin-top: 1rem;
+    }
+    .cta-area a {
+      display: inline-block;
+      margin: 0.5rem 1rem;
+      padding: 0.65rem 1.25rem;
+      font-size: 1rem;
+      border: 2px solid #f57c00;
+      border-radius: 4px;
+      background: transparent;
+      color: #f57c00;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    .cta-area a:hover {
+      background: #f57c00;
+      color: #000;
+    }
+    .cta-area a[disabled] {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    /* FEATURES INFO SECTION */
+    .info-section {
+      padding: 3rem 1rem;
+      background: rgba(0,0,0,0.6);
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+    .info-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #f57c00;
+    }
+    .info-section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto 1rem auto;
+      color: #fff;
+    }
+    .feature-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .feature-item {
+      background: rgba(0,0,0,0.7);
+      padding: 1.25rem;
+      border-radius: 6px;
+      text-align: left;
+    }
+    .feature-item h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: #f57c00;
+    }
+    .feature-item p {
+      font-size: 1rem;
+      line-height: 1.4;
+      color: #ddd;
+    }
+
+    /* EXAMPLE DASHBOARD / MOCKUP SECTION */
+    .dashboard-section {
+      padding: 3rem 1rem;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+    .dashboard-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #f57c00;
+    }
+    .dashboard-demo {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      background: rgba(0,0,0,0.6);
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+    .dashboard-demo table {
+      width: 100%;
+      border-collapse: collapse;
+      color: #fff;
+    }
+    .dashboard-demo th,
+    .dashboard-demo td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      text-align: left;
+      font-size: 0.95rem;
+    }
+    .dashboard-demo th {
+      background: rgba(255,255,255,0.1);
+      color: #f57c00;
+      font-size: 1rem;
+    }
+    .dashboard-demo tr:hover {
+      background: rgba(255,255,255,0.1);
+    }
+    .dashboard-demo .btn-contact {
+      padding: 0.5rem 1rem;
+      font-size: 0.85rem;
+      border: none;
+      border-radius: 4px;
+      background: #616161;
+      color: #fff;
+      cursor: not-allowed;
+    }
+
+    /* PRICING TEASER SECTION */
+    .pricing-section {
+      padding: 3rem 1rem;
+      background: rgba(0,0,0,0.7);
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+    .pricing-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #f57c00;
+    }
+    .pricing-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .pricing-card {
+      background: rgba(0,0,0,0.6);
+      padding: 1.25rem;
+      border-radius: 6px;
+    }
+    .pricing-card h3 {
+      font-size: 1.3rem;
+      color: #f57c00;
+      margin-bottom: 0.5rem;
+    }
+    .pricing-card p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: #ddd;
+    }
+    .pricing-card .price {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+      color: #fff;
+    }
+    .pricing-card small {
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+
+    /* COMING SOON & BETA SIGNUP */
+    .coming-soon {
+      padding: 4rem 1rem;
+      background: rgba(0,0,0,0.8);
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+    .coming-soon h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #f57c00;
+    }
+    .coming-soon p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.4;
+    }
+    #mc_embed_signup {
+      width: 100%!important;
+      max-width: 400px!important;
+      margin: 0 auto;
+      background: rgba(0,0,0,0.6)!important;
+      padding: 1.5rem;
+      border-radius: 8px;
+    }
+    #mc_embed_signup input.email {
+      background: rgba(0,0,0,0.8);
+      border: 1px solid #444;
+      color: #fff;
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      margin-bottom: 0.75rem;
+    }
+    #mc_embed_signup .button,
+    #mc-embedded-subscribe {
+      width: 100%!important;
+      background: #111;
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+    #mc_embed_signup .button:hover,
+    #mc-embedded-subscribe:hover {
+      background: #333;
+    }
+    #mc_embed_signup .indicates-required {
+      display: none;
+    }
+
+    /* RESPONSIVE ADJUSTMENTS */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .cta-area a {
+        margin: 0.5rem 0.5rem;
+      }
+      .feature-list {
+        grid-template-columns: 1fr;
+      }
+      .dashboard-demo {
+        font-size: 0.9rem;
+      }
+      .pricing-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="overlay"></div>
+
+  <!-- HAMBURGER MENU -->
+  <div class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </div>
+  <nav id="side-menu" aria-label="Main navigation">
+  <div class="menu-title">Core Trades Inc.</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="under-construction-job-board.html">Job Board</a></li>
+    <li><a href="under-construction-corerecruit.html">CoreRecruit™</a></li>
+    <li><a href="under-construction-resume-creator.html">Resume Creator</a></li>
+    <li><a href="under-construction-corecompliance.html">CoreCompliance™</a></li>
+    <li><a href="under-construction-coretrades-daily.html">CoreTrades Daily</a></li>
+    <li><a href="under-construction-contact.html">Contact Us</a></li>
+  </ul>
+</nav>
+
+  <!-- HERO + INTRO -->
+  <section class="hero" id="main-content">
+    <h1>Document Management Software<br>(Under Construction)</h1>
+    <p>Our secure B2B platform streamlines pre-employment file folders, government compliance, and medical documentation. Automate inductions, track expirations, and ensure every employee’s paperwork is up-to-date. Join our private beta!</p>
+    <div class="cta-area">
+      <a href="#beta-signup" class="btn-beta">Request Beta Access</a>
+      <a href="#login" disabled style="border-color:#e65100; color:#e65100;">Employer Login (Coming Soon)</a>
+    </div>
+  </section>
+
+  <!-- FEATURES INFO SECTION -->
+  <section class="info-section">
+    <h2>Platform Features</h2>
+    <p>From automated compliance tracking to secure storage, Core Trades Document Management SaaS has everything you need to manage pre-employment and induction paperwork seamlessly.</p>
+    <div class="feature-list">
+      <div class="feature-item">
+        <h3>Pre-Employment File Folders</h3>
+        <p>Digitally store and organize resumes, offer letters, and onboarding forms in one centralized location for each employee.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Government &amp; Safety Compliance</h3>
+        <p>Track and store driver’s abstracts, WSIB certificates, and safety training records. Receive alerts before documents expire to maintain compliance.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Medical Documentation</h3>
+        <p>Securely collect and manage pre-hire medical forms, immunization records, and fit-for-duty certificates with encrypted file storage.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Custom Workflows &amp; Approvals</h3>
+        <p>Create tailored induction workflows. Route documents for approval, track sign-offs, and log timestamps for audit-ready record-keeping.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Digital Signatures</h3>
+        <p>Enable candidates and management to sign onboarding checklists, NDAs, and policy acknowledgments electronically—no printing required.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Automated Notifications</h3>
+        <p>Configure reminders for expiring certifications, license renewals, and mandatory safety renewals. Keep your workforce always ready.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXAMPLE DASHBOARD / MOCKUP SECTION -->
+  <section class="dashboard-section">
+    <h2>Dashboard Preview</h2>
+    <div class="dashboard-demo">
+      <table>
+        <thead>
+          <tr>
+            <th>Employee Name</th>
+            <th>Trade</th>
+            <th>Doc Type</th>
+            <th>Status</th>
+            <th>Expiration</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>John Doe</td>
+            <td>Welder</td>
+            <td>WSIB Certificate</td>
+            <td>Valid</td>
+            <td>12/15/2025</td>
+            <td><button class="btn-contact" disabled>View</button></td>
+          </tr>
+          <tr>
+            <td>Jane Smith</td>
+            <td>Electrician</td>
+            <td>Driver’s Abstract</td>
+            <td>Expired</td>
+            <td>02/01/2024</td>
+            <td><button class="btn-contact" disabled>Upload</button></td>
+          </tr>
+          <tr>
+            <td>Mike Johnson</td>
+            <td>Plumber</td>
+            <td>Medical Clearance</td>
+            <td>Pending</td>
+            <td>—</td>
+            <td><button class="btn-contact" disabled>Send Request</button></td>
+          </tr>
+          <tr>
+            <td>Emily Brown</td>
+            <td>Carpenter</td>
+            <td>Safety Training</td>
+            <td>Valid</td>
+            <td>06/30/2025</td>
+            <td><button class="btn-contact" disabled>View</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- PRICING TEASER SECTION -->
+  <section class="pricing-section">
+    <h2>Pricing Teaser</h2>
+    <div class="pricing-cards">
+      <div class="pricing-card">
+        <h3>Beta Access</h3>
+        <p class="price">$0</p>
+        <small>Invite-only, limited seats</small>
+      </div>
+      <div class="pricing-card">
+        <h3>Starter Plan</h3>
+        <p class="price">$149</p>
+        <small>per month – up to 100 employee records</small>
+      </div>
+      <div class="pricing-card">
+        <h3>Professional Plan</h3>
+        <p class="price">$349</p>
+        <small>per month – up to 500 employee records</small>
+      </div>
+      <div class="pricing-card">
+        <h3>Enterprise</h3>
+        <p class="price">Custom</p>
+        <small>Unlimited records &amp; dedicated support</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMING SOON & BETA SIGNUP -->
+  <section class="coming-soon" id="beta-signup">
+    <h2>Join Our Private Beta</h2>
+    <p>Be the first to experience Core Trades Document Management SaaS. Secure your spot in our beta and streamline your pre-employment and compliance workflows. Limited seats available!</p>
+    <!-- Begin Mailchimp Signup Form -->
+    <div id="mc_embed_signup">
+      <form action="https://YOUR-USERNAME.usX.list-manage.com/subscribe/post?u=YOUR_U_VALUE&amp;id=YOUR_ID_VALUE" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll">
+          <label for="mce-EMAIL" style="color:#fff; font-size:1.1rem; margin-bottom:0.5rem; display:block;">Business Email</label>
+          <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="you@company.com" required>
+          <!-- honeypot field to deter bots -->
+          <div style="position: absolute; left: -5000px;" aria-hidden="true">
+            <input type="text" name="b_YOUR_U_VALUE_YOUR_ID_VALUE" tabindex="-1" value="">
+          </div>
+          <div class="clear" style="margin-top:0.75rem;">
+            <input type="submit" value="Request Beta Access" name="subscribe" id="mc-embedded-subscribe" class="button">
+          </div>
+        </div>
+      </form>
+    </div>
+    <!--End mc_embed_signup-->
+  </section>
+
+  <script>
+    // Toggle hamburger menu
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('hamburger').classList.toggle('open');
+      document.getElementById('side-menu').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
