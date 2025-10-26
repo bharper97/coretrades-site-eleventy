@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://base44.com/logo_v2.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Base44 APP</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  
+<!-- Founding 50 Checkout Button -->
+<div style="position:fixed;right:20px;bottom:20px;z-index:9999;">
+  <button id="foundingBtn" style="background:#f57c00;color:#fff;border:none;padding:12px 18px;border-radius:6px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.4)">Join Founding 50 – $34.99/mo</button>
+</div>
+<script>
+  document.getElementById('foundingBtn').onclick = async () => {
+    const email = prompt('Your business email (for receipt):') || '';
+    const res = await fetch('/.netlify/functions/checkout', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ email })
+    });
+    try { const { url } = await res.json(); window.location = url; } catch(e){ alert('Checkout error'); }
+  };
+</script>
+
+</body>
+</html>
