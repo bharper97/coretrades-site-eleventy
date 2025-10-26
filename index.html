@@ -18,11 +18,10 @@
   document.getElementById('foundingBtn').onclick = async () => {
     const email = prompt('Your business email (for receipt):') || '';
     const res = await fetch('/.netlify/functions/checkout', {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
+      method: 'POST', headers: { 'content-type': 'application/json' },
       body: JSON.stringify({ email })
     });
-    try { const { url } = await res.json(); window.location = url; } catch(e){ alert('Checkout error'); }
+    try{ const { url } = await res.json(); window.location = url; }catch(e){ alert('Checkout error'); }
   };
 </script>
 
