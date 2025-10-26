@@ -1,0 +1,6 @@
+[build]
+command = "unzip -o _site.zip -d _site"
+publish = "_site"
+
+[functions]
+directory = "netlify/functions"
